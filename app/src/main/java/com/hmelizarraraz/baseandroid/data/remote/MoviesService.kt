@@ -1,4 +1,4 @@
-package com.hmelizarraraz.baseandroid
+package com.hmelizarraraz.baseandroid.data.remote
 
 import retrofit2.http.GET
 

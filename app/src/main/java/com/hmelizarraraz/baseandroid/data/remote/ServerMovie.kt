@@ -1,6 +1,9 @@
-package com.hmelizarraraz.baseandroid
+package com.hmelizarraraz.baseandroid.data.remote
 
-data class Servermovie(
+import com.hmelizarraraz.baseandroid.data.Movie
+import com.hmelizarraraz.baseandroid.data.local.LocalMovie
+
+data class ServerMovie(
     val adult: Boolean,
     val backdrop_path: String,
     val genre_ids: List<Int>,
@@ -16,4 +19,12 @@ data class Servermovie(
     val vote_average: Double,
     val vote_count: Int,
     val favorite: Boolean = false
+)
+
+fun ServerMovie.toMovie() = Movie(
+    id = 0,
+    title = title,
+    overview = overview,
+    posterPath = poster_path,
+    favorite = favorite
 )
